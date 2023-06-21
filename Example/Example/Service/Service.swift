@@ -2,5 +2,5 @@ import Foundation
 import DependencyInjection
 
 protocol Service {
-    func getCars() async throws -> [Car]
+    func getVehicles() async throws -> [Vehicle]
 }

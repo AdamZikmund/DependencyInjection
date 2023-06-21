@@ -1,7 +1,7 @@
 import Foundation
 
 class LiveService: Service {
-    func getCars() async throws -> [Car] {
+    func getVehicles() async throws -> [Vehicle] {
         try await Task.sleep(for: .seconds(1))
         return [
             .init(name: "Fabia", brand: .skoda),

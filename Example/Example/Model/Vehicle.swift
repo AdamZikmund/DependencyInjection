@@ -1,13 +1,13 @@
 import Foundation
 
-struct Car: Identifiable, Equatable {
+struct Vehicle: Identifiable, Equatable {
     // MARK: - Properties
     let id = UUID()
     let name: String
-    let brand: CarBrand
+    let brand: VehicleBrand
 
     // MARK: - Lifecycle
-    init(name: String, brand: CarBrand) {
+    init(name: String, brand: VehicleBrand) {
         self.name = name
         self.brand = brand
     }

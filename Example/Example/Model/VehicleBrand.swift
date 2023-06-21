@@ -1,6 +1,6 @@
 import Foundation
 
-enum CarBrand: String {
+enum VehicleBrand: String {
     case skoda
     case volvo
     case porsche

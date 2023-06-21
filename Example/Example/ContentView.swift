@@ -3,23 +3,23 @@ import SwiftUI
 struct ContentView: View {
     // MARK: - Properties
     let service: Service
-    @State private var cars: [Car] = []
+    @State private var vehicles: [Vehicle] = []
 
     // MARK: - Body
     var body: some View {
         VStack {
-            ForEach(cars) { car in
+            ForEach(vehicles) { vehicle in
                 VStack {
-                    Text(car.name)
-                    Text(car.brand.rawValue)
+                    Text(vehicle.name)
+                    Text(vehicle.brand.rawValue)
                     Divider()
                 }
             }
         }
-        .animation(.default, value: cars)
+        .animation(.default, value: vehicles)
         .padding()
         .task {
-            cars = (try? await service.getCars()) ?? []
+            vehicles = (try? await service.getVehicles()) ?? []
         }
     }
 }
